@@ -1,0 +1,36 @@
+:root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --text: #1d1d1f;
+    --secondary: #86868b;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+}
+
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+.hidden { display: none !important; }
+
+/* Auth Card */
+.auth-container { display: flex; align-items: center; justify-content: center; height: 100vh; }
+.card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.05); width: 100%; max-width: 400px; }
+
+/* Nav */
+nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 15px 40px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+.nav-links span { margin-left: 20px; cursor: pointer; color: var(--secondary); font-weight: 500; }
+.nav-links span.active { color: var(--accent); }
+
+/* Grid */
+.container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+.file-item { background: white; border: 1px solid var(--border); padding: 20px; border-radius: 15px; transition: 0.2s; }
+.file-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+/* Buttons & Forms */
+input, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid var(--border); border-radius: 10px; box-sizing: border-box; font-size: 15px; }
+.btn { padding: 12px 20px; border-radius: 10px; border: none; font-weight: 600; cursor: pointer; width: 100%; }
+.btn-primary { background: var(--accent); color: white; }
+
+/* Modal */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.modal-content { background: white; padding: 20px; border-radius: 20px; width: 90%; max-width: 600px; }
+img, iframe { width: 100%; border-radius: 10px; max-height: 70vh; }
